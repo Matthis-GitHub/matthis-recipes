@@ -46,10 +46,95 @@ h6 {
   --color-panel: rgb(31, 41, 55);
   --color-panel-border: rgba(229, 231, 235, 0.05);
   --color-link: rgb(244, 114, 182);
+  --color-btn-border: rgb(75 85 99);
 }
 
 body {
   font-family: Arial, Helvetica, sans-serif;
-  color: var(--odin-color-white);
-  background-color: var(--odin-color-bg);
+  color: var(--color-white);
+}
+
+/* ------------------------------------------*/
+
+.container {
+  height: 100vh;
+
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: 4fr 20fr 1fr;
+}
+
+header {
+  background-color: var(--color-bg);
+  grid-column: 1 / 3;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border: 2px solid var(--color-panel-border);
+}
+
+.sidebar {
+  background-color: var(--color-bg);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  border: 2px solid var(--color-panel-border);
+}
+
+main {
+  background-color: var(--color-bg);
+  border: 2px solid var(--color-panel-border);
+}
+
+footer {
+  background-color: var(--color-bg);
+  grid-column: 1 / 3;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border: 2px solid var(--color-panel-border);
+}
+
+footer p {
+  font-size: 14px;
+}
+
+.create-recipe {
+  font-size: 14px;
+  padding: 8px 16px;
+  border-radius: 6px;
+  border: 1px solid var(--color-btn-border);
+  background-color: var(--color-bg);
+  color: var(--color-white);
+}
+
+.card-container {
+  padding: 12px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 12px;
+}
+
+.card {
+  background-color: var(--color-panel);
+  padding: 16px;
+  text-align: center;
+  border-radius: 8px;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+.card .recipe-title {
+  font-size: 18px;
 }

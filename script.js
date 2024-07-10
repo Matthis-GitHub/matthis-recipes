@@ -1,0 +1,2 @@
+// Global variables
+const allRecipes = [];
